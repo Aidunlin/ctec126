@@ -1,0 +1,25 @@
+{
+  "result": [
+    {
+      "SKU": 3283,
+      "category": "Produce",
+      "description": "Apple",
+      "qtyInStock": 100,
+      "price": 2.29
+    },
+    {
+      "SKU": 94011,
+      "category": "Produce",
+      "description": "Organic Banana",
+      "qtyInStock": 36,
+      "price": 0.89
+    },
+    {
+      "SKU": 42660,
+      "category": "Miscellaneous",
+      "description": "Ice",
+      "qtyInStock": 50,
+      "price": 3.00
+    }
+  ]
+}

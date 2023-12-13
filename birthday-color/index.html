@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Color</title>
+
+  <style>
+    body {
+      color: white;
+      font-family: sans-serif;
+      margin: auto;
+      max-width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="heading">Birthday Color</h1>
+
+  <label for="input">
+    Enter your birthday:
+    <input type="color" name="Birthday Color" id="input">
+  </label>
+
+  <p>Birthday: <span id="output"></span></p>
+
+  <script>
+    const input = document.getElementById("input");
+    const output = document.getElementById("output");
+    const heading = document.getElementById("heading");
+
+    let interval;
+
+    function changeTextColor(red, green, blue) {
+      document.body.style.backgroundColor = `rgb(${red} ${green} ${blue})`;
+    }
+
+    function onBirthdayChanged() {
+      const month = Math.min(parseInt(input.value.substr(1, 2), 16), 12);
+      const day = Math.min(parseInt(input.value.substr(3, 2), 16), 31);
+      const year = parseInt(input.value.substr(5, 2), 16) % 100;
+
+      output.innerText = `${month}/${day}/${year}`;
+
+      changeTextColor(month, day, year);
+    }
+
+    window.onload = () => {
+      if (localStorage.birthday) {
+        input.value = localStorage.birthday;
+        onBirthdayChanged();
+      };
+
+      interval = setInterval(() => {
+        localStorage.birthday = input.value;
+      }, 500);
+    };
+
+    input.oninput = () => {
+      onBirthdayChanged();
+    };
+  </script>
+</body>
+
+</html>

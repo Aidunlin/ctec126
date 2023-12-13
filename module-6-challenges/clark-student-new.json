@@ -1,0 +1,19 @@
+{
+  "id": 999,
+  "first": "Shanice",
+  "last": "Johnson",
+  "address": {
+    "street": "123 Main Street",
+    "state": "Washington",
+    "zip": 98681,
+    "country": "USA"
+  },
+  "degreeProgram": "Web Development",
+  "coursesTaken": [
+    "CTEC 121 - Intro to Programming and Problem Solving",
+    "CTEC 122 - HTML Fundamentals",
+    "CTEC 126 - JavaScript",
+    "CTEC 127 - PHP with SQL 1",
+    "CTEC 227 - PHP with SQL 2"
+  ]
+}

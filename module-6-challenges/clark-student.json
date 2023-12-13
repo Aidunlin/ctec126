@@ -1,0 +1,11 @@
+{
+  "id": 999,
+  "first": "Shanice",
+  "last": "Johnson",
+  "address": {
+    "street": "123 Main Street",
+    "state": "Washington",
+    "zip": 98681,
+    "country": "USA"
+  }
+}

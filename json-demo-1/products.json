@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "model": "XRCV 21",
+      "make": "Honda",
+      "price": 499.99,
+      "description": "Honda's most popular model",
+      "type": "gas",
+      "image": ""
+    },
+    {
+      "model": "XRCV 21B",
+      "make": "Honda",
+      "price": 539.99,
+      "description": "Honda's most popular battery powered model",
+      "type": "battery",
+      "image": ""
+    }
+  ]
+}
