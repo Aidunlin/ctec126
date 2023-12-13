@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 360px;
+}
+
+details {
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+fieldset {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0.75rem 1rem 1rem 1rem;
+}
+
+fieldset ~ fieldset {
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+}
+
+label + label {
+  margin-top: 1rem;
+}
+
+label > *:not([type="radio"], [type="checkbox"]) {
+  width: 100%;
+}
+
+input, select {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font: inherit;
+}
+
+.changed:invalid {
+  border-color: hsl(0, 100%, 30%);
+}
+
+.error {
+  color: hsl(0, 100%, 30%);
+  display: none;
+}
+
+.changed:invalid + .error {
+  display: block;
+}
+
+#errors {
+  color: hsl(0, 100%, 30%);
+}

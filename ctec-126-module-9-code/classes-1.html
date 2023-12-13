@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes Demo 1</title>
+</head>
+
+<body>
+    <script>
+        class Dog {
+            constructor(name, breed, color, gender, legs) {
+                this.name = name;
+                this.breed = breed;
+                this.color = color;
+                this.gender = gender;
+                this.legs = legs;
+                this.state = 'sitting';
+            }
+
+            bark() {
+                this.state = 'barking';
+                console.log(`${this.name}, the dog is ${this.state}.`);
+            }
+
+            run() {
+                this.state = 'running';
+                console.log(`${this.name}, the dog is ${this.state}.`);
+            }
+
+            sit() {
+                this.state = 'sitting';
+                console.log(`${this.name}, is ${this.state}.`);
+            }
+
+            getDogState() {
+                return this.state;
+            }
+
+            getDogInfo() {
+                return `Dog Name: ${this.name}\nDog Breed: ${this.breed}\nDog Color: ${this.color}\nDog Gender: ${this.gender}\nDog Legs: ${this.legs}\nDog State: ${this.state}`;
+            }
+        }
+
+        const bruce = new Dog('Bruce', 'English Springer Spaniel', 'brown', 'male', 4);
+        const garth = new Dog('Garth', 'Bull Dog', 'Brown', 'Male', 4);
+        console.log(bruce);
+        // console.log(bruce.state)
+        console.log(bruce.run());
+        console.log(bruce.bark());
+        console.log(bruce.getDogInfo());
+        console.log(garth.bark());
+        console.log(garth.getDogInfo())
+        // bruce.school = 'clark'
+    </script>
+</body>
+
+</html>

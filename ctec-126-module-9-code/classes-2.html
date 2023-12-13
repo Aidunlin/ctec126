@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes Demo 2</title>
+</head>
+
+<body>
+    <p>Click on a dog to make them bark!</p>
+    <div id="dogs"></div>
+    <script>
+        class Dog {
+            constructor(element, name, breed, color, gender, legs) {
+                this.element = element;
+                this.name = name;
+                this.breed = breed;
+                this.color = color;
+                this.gender = gender;
+                this.legs = legs;
+                this.state = 'sitting';
+                this.element.addEventListener('click', () => {
+                    alert(this.bark());
+                });
+            }
+
+            bark() {
+                this.state = 'barking';
+                console.log(`${this.name}, the dog is barking.`);
+                return `${this.name}, the dog is barking.`;
+            }
+
+            run() {
+                this.state = 'running';
+                console.log(`${this.name}, the dog is running.`);
+            }
+
+            sit() {
+                this.state = 'sitting';
+                console.log(`${this.name}, is sitting.`);
+            }
+
+            getDogState() {
+                return this.state;
+            }
+
+            getDogInfo() {
+                return `Dog Name: ${this.name}\nDog Breed: ${this.breed}\nDog Color: ${this.color}\nDog Gender: ${this.gender}\nDog Legs: ${this.legs} `;
+            }
+        }
+
+        function createDog() {
+            const dogs = document.querySelector('#dogs');
+            const div = document.createElement('div');
+            const image = document.createElement('img');
+            const text = document.createElement('p');
+            div.appendChild(image);
+            div.appendChild(text);
+            image.src = 'images/golden_puppy.jpg';
+            // image.setAttribute('src','images/golden_puppy.jpg')
+            const bruce = new Dog(image, 'Bruce', 'Golden Puppy', 'Tan', 'male', 4);
+            image.id = bruce.name;
+            dogs.appendChild(div);
+            document.querySelector('#dogs p').innerText = bruce.getDogInfo();
+        }
+
+        createDog()
+
+    </script>
+</body>
+
+</html>

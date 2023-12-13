@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <header>
+        <h1>window.localStorage</h1>
+        window.localStorage on MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Window localStorage</a>
+    </header>
+    <main>
+        <p>The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions. localStorage is similar to sessionStorage, except that while data stored in localStorage has no expiration time, data stored in sessionStorage gets cleared when the page session ends — that is, when the page is closed.</p>
+
+        <p>It should be noted that data stored in either localStorage or sessionStorage is specific to the protocol of the page.</p>
+
+        <p>The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings).</p>
+    </main>
+    <script>
+        // Use .setItem() to store a key/value
+        localStorage.setItem('myDog', 'Tucker');
+        localStorage.setItem('kids', ['Alyssa', 'Brandon', 'Erin']);
+        localStorage.setItem('deleteMe', 'I will be deleted');
+
+        // read item and convert to an array using split()
+        const kids = localStorage.getItem('kids').split(',');
+
+        // log out items to the console
+        console.log(`myDog: ${localStorage.getItem('myDog')}`);
+        console.log(`kids: ${kids}`);
+
+        // remove an item
+        localStorage.removeItem('deleteMe');
+        console.log(`deleteMe: ${localStorage.getItem('deleteMe')}`);
+
+        // remove all items
+        // localStorage.clear()
+        console.log(`myDog after clear: ${localStorage.getItem('myDog')}`)
+    </script>
+</body>
+
+</html>

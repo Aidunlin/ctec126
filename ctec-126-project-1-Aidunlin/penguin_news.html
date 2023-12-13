@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Fonts Atkinson Hyperlegible -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project 1 - Penguin Nation News</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark p-3" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="penguin_news.html">Penguin Nation News</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://clark.edu">Clark College Website</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-5">
+            <header>
+                <div class="col-12">
+                    <img src="img/logo.png" alt="Clark College Logo" class="float-end" id="theLogo">
+                    <h1 class="rounded align-bottom fw-bold">The Latest News from the Penguin Nation</h1>
+                    <div id="quotesPanel">Rotating quotes go here</div>
+                </div>
+            </header>
+        </div>
+        <main>
+            <div class="row mt-4">
+                <div class="col-lg-6 mt-2">
+                    <h2 class="text-white p-2 rounded-3 shadow">News</h2>
+                    <div id="newsPanel"></div>
+                </div>
+                <div class="col-lg-6 mt-2">
+                    <h2 class="text-white p-2 rounded-3 shadow">Featured Student</h2>
+                    <div id="featuredStudentPanel"></div>
+                </div>
+            </div>
+        </main>
+        <div class="row">
+            <div class="col-12">
+                <footer class="text-center pt-5">
+                    <p>Copyright &copy; 2023 by Aidan Linerud 🐧</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boostrap JavaScript code for hamburger toggler -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- Your JavaScript code must go in this file -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

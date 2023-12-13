@@ -1,0 +1,77 @@
+{
+  "members": [
+    {
+      "firstName": "Lauri",
+      "lastName": "Gillyatt",
+      "URL": "https://robohash.org/voluptatumtemporibusamet.png?size=500x500&set=set1",
+      "hobbies": [
+        "playing video games",
+        "hiking",
+        "watching movies"
+      ],
+      "miscellaneous": {
+        "favoriteBand": "Metallica",
+        "favoriteFood": "hamburger"
+      }
+    },
+    {
+      "firstName": "Zelig",
+      "lastName": "Bernardin",
+      "URL": "https://robohash.org/minusquiullam.png?size=500x500&set=set1",
+      "hobbies": [
+        "playing video games",
+        "gardening",
+        "hiking"
+      ],
+      "miscellaneous": {
+        "favoriteBand": "Radiohead",
+        "favoriteFood": "steak"
+      }
+    },
+    {
+      "firstName": "Yasmeen",
+      "lastName": "Sture",
+      "URL": "https://robohash.org/providentvoluptatibusquia.png?size=500x500&set=set1",
+      "hobbies": [
+        "watching movies",
+        "reading",
+        "hiking",
+        "gardening"
+      ],
+      "miscellaneous": {
+        "favoriteBand": "The Rolling Stones",
+        "favoriteFood": "pad thai"
+      }
+    },
+    {
+      "firstName": "Charline",
+      "lastName": "Matijevic",
+      "URL": "https://robohash.org/autquaeblanditiis.png?size=500x500&set=set1",
+      "hobbies": [
+        "knitting",
+        "gardening",
+        "yoga",
+        "playing video games",
+        "watching movies"
+      ],
+      "miscellaneous": {
+        "favoriteBand": "Radiohead",
+        "favoriteFood": "pizza"
+      }
+    },
+    {
+      "firstName": "Phillip",
+      "lastName": "Moir",
+      "URL": "https://robohash.org/iureculpadeleniti.png?size=500x500&set=set1",
+      "hobbies": [
+        "yoga",
+        "watching movies",
+        "reading"
+      ],
+      "miscellaneous": {
+        "favoriteBand": "Radiohead",
+        "favoriteFood": "sushi"
+      }
+    }
+  ]
+}

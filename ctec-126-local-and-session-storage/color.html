@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Color</title>
+</head>
+
+<body>
+    <main>
+        <h1>Using a form with localStorage</h1>
+        <form action="" id="myForm">
+            <label for="color">Select a Color</label>
+            <input type="color" id="color">
+            <br><br>
+            <input type="submit" value="Save my Color">
+        </form>
+    </main>
+
+    <script>
+        document.querySelector('body').style.background = localStorage.getItem('bg');
+
+        const color = document.querySelector('#color');
+        const myForm = document.querySelector('#myForm');
+
+        myForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // alert(color.value)
+            localStorage.setItem('bg', color.value);
+            document.querySelector('body').style.background = localStorage.getItem('bg');
+        })
+    </script>
+</body>
+
+</html>

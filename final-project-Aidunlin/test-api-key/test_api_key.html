@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test API Key</title>
+</head>
+
+<body>
+  <main>
+    <h1>API Key Test</h1>
+    <p>Be sure to test this page using Live Server</p>
+  </main>
+  <script>
+    const api_key = 'R9GGKJGSA6T7rkC12818ywYjxoXA108S';
+    const url = "http://api.nytimes.com/svc/topstories/v2/home.json?api-key=" + api_key;
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        if (data.status == "OK") {
+          alert('You are good to go! HIGH FIVE!');
+        } else {
+          alert('Oh poop. Something is not right with your API key.');
+        }
+      })
+  </script>
+</body>
+
+</html>

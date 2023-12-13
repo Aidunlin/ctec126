@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Away Demo</title>
+    <style>
+        #quotes {
+            opacity: 1;
+            transition: 1s opacity;
+            text-align: center;
+            font-size: 64px;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="quotes">
+        <p id="quote"></p>
+    </div>
+
+    <script>
+        const quotes = ['I like Pizza', 'I like fish (NOT)', 'I like turtles', 'I like donuts'];
+        const p = document.querySelector('#quote');
+        let index = Math.floor(Math.random() * quotes.length);
+        let current = index;
+        p.innerText = quotes[index];
+
+        setInterval(fadeout, 4000); //4 seconds
+
+        function fadeout() {
+            const q = document.querySelector('#quotes');
+            q.style.opacity = '0';
+            index = Math.floor(Math.random() * quotes.length);
+            while (index === current) {
+                index = Math.floor(Math.random() * quotes.length);
+            }
+            current = index;
+            setTimeout(function () {
+                p.innerText = quotes[index];
+                q.style.opacity = '1';
+            }, 1000);
+        }
+
+    </script>
+</body>
+
+</html>

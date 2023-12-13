@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes Demo 3</title>
+</head>
+
+<body>
+    <p>Click on a dog to make them bark!</p>
+    <div id="dogs"></div>
+    <script>
+        class Dog {
+            constructor(element, name, breed, color, gender, legs) {
+                this.element = element;
+                this.name = name;
+                this.breed = breed;
+                this.color = color;
+                this.gender = gender;
+                this.legs = legs;
+                this.state = 'sitting';
+                this.pic = 'puppy';
+                this.element.addEventListener('click', () => {
+                    // alert(this.bark())
+                    // this.element.remove()
+                    if (this.pic == 'puppy') {
+                        this.element.src = 'https://live.staticflickr.com/1/555998_d7966f3743_z.jpg';
+                        this.pic = 'gayle';
+                    } else {
+                        this.element.src = 'images/golden_puppy.jpg';
+                        this.pic = 'puppy';
+                    }
+
+                });
+            }
+
+            bark() {
+                this.state = 'barking';
+                console.log(`${this.name}, the dog is barking.`);
+                return `${this.name}, the dog is barking.`;
+            }
+
+            run() {
+                this.state = 'running';
+                console.log(`${this.name}, the dog is running.`);
+            }
+
+            sit() {
+                this.state = 'sitting';
+                console.log(`${this.name}, is sitting.`);
+            }
+
+            getDogState() {
+                return this.state;
+            }
+
+            getDogInfo() {
+                return `Dog Name: ${this.name}\nDog Breed: ${this.breed}\nDog Color: ${this.color}\nDog Gender: ${this.gender}\nDog Legs: ${this.legs} `;
+            }
+        }
+
+
+        const packOfDogs = [];
+        const dogs = document.querySelector('#dogs');
+
+        createDog('Bruce', 'Springer', 'Brown', 'Male', 2);
+        createDog('Logan', 'Poodle', 'White and Fluffy', 'Male', 4);
+
+        function createDog(dogName, dogType, dogColor, dogGender, dogLegs) {
+            const div = document.createElement('div');
+            const image = document.createElement('img');
+            const text = document.createElement('p');
+            div.appendChild(image);
+            div.appendChild(text);
+            image.src = 'images/golden_puppy.jpg';
+            const newDog = new Dog(image, dogName, dogType, dogColor, dogGender, dogLegs);
+            packOfDogs.push(newDog);
+            text.id = newDog.name;
+            dogs.appendChild(div);
+            document.querySelector(`#${newDog.name}`).innerText = newDog.getDogInfo();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.input-group {
+  width: max-content;
+  margin-bottom: -2.5em;
+}
+
+a {
+  color: black;
+  transition: color 1.5s;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+.card {
+  transition: border-color 1.5s, color 1.5s, background-color 1.5s;
+}

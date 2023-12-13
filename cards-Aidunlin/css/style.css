@@ -1,0 +1,51 @@
+/* style.css */
+
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+#deck {
+  margin: 20px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(110px, 200px));
+  grid-template-rows: auto;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#action {
+  height: 30px;
+  margin: 20px 10px;
+  font-size: 2rem;
+}
+
+img {
+  width: 100px;
+  border-radius: 8px;
+  box-shadow: grey 3px 3px 3px;
+}
+
+button {
+  background: blueviolet;
+  color: white;
+  border: 1px solid #dadada;
+  padding: 10px 20px;
+  opacity: 1;
+  transition: 0.3s;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+button:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+button:focus {
+  outline: 0;
+  color: white;
+  background: black;
+}

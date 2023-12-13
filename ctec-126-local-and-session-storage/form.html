@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form LocalStorage Demo</title>
+</head>
+
+<body>
+    <form action="" id="myForm">
+        <label for="firstname">First name</label>
+        <br>
+        <input type="text" id="firstname">
+        <br>
+        <label for="lastname">Last name</label>
+        <br>
+        <input type="text" id="lastname">
+        <br><br>
+        <input type="submit" value="Save me!">
+    </form>
+
+    <script>
+        // alert(localStorage.getItem('first_name'))
+        const myForm = document.querySelector('#myForm');
+        myForm.addEventListener('submit', () => {
+            const first = document.querySelector('#firstname').value;
+            const last = document.querySelector('#lastname').value;
+            localStorage.setItem('first', first);
+            localStorage.setItem('last', last);
+        })
+    </script>
+</body>
+
+</html>
